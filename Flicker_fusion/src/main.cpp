@@ -57,7 +57,7 @@ void buttonpress_ISR()                                                    // Int
   { buttonpress = !buttonpress;
     previoustimebutton_ms = currenttimebutton_ms;
     // printing commands to print Flicker fusion frequency and timeperiod
-    Serial.print("Frequency:");
+    Serial.print("\nFrequency:");
     Serial.print(frequency);
     Serial.print("Hz");
     Serial.print("       Time period:");
