@@ -13,7 +13,7 @@ void setup() {
   
   pinMode(ledPin, OUTPUT);          // set the digital pin as output
   pinMode(buttonpin, INPUT_PULLUP); // Enabling internal pullup resistor for button
-  Serial.begin(115200);             // Baud rate
+  Serial.begin(9600);             // Baud rate
   attachInterrupt(digitalPinToInterrupt(buttonpin), buttonpress_ISR, FALLING); // button press enable interrupt function 'buttonpress_ISR'
 }
 
