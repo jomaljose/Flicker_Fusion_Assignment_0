@@ -22,7 +22,8 @@ void loop() {
   {
     frequency=0.5;
   }
- 
+    //Plot point - 1
+    Serial.println(ledState); 
   if(repeat == 15000)   //Lopp to repeat same frequency signal multiple time and then increment frequency
   {
    frequency = frequency + 0.5;
@@ -31,25 +32,26 @@ void loop() {
  
   time_period_ms = (1/frequency) * 1000; //Time period(ms), frequensy relation
   unsigned long currentMillis = millis();//millis function used
-
+    //Plot point - 2
+    Serial.println(ledState);
   if (currentMillis - previousMillis >= (time_period_ms/2)) //Loop for LED toggling after every half time period
   {
     
-    //Plot point - 1
-    //Serial.println(ledState);        
+    //Plot point - 3
+    Serial.println(ledState);        
     ledState = !ledState;
     digitalWrite(ledPin,ledState);
     previousMillis = currentMillis;
-    //Plot point - 2
-    //Serial.println(ledState);
+    //Plot point - 4
+    Serial.println(ledState);
   }
   repeat++;
 }
 
-void buttonpress_ISR()    // Interrupt function
+void buttonpress_ISR()                                                    // Interrupt function
 {
-  static uint32_t previoustimebutton_ms = 0;        //Variable for debouncing
-  uint32_t currenttimebutton_ms = millis();         //Variable for debouncing
+  static uint32_t previoustimebutton_ms = 0;                              //Variable for debouncing
+  uint32_t currenttimebutton_ms = millis();                               //Variable for debouncing
    if((currenttimebutton_ms - previoustimebutton_ms) >= debouncedelay_ms) // Code inside loop only executes if buttonpress time is greater than debounce delay_ms
   { buttonpress = !buttonpress;
     previoustimebutton_ms = currenttimebutton_ms;
