@@ -16,7 +16,7 @@ In this project I used a Teensy 3.2, a push button, 380 ohm resistor and LED to 
 
 ## METHODS
 ### Hardware Description
-**
+
 
 #### Components
 
@@ -64,7 +64,7 @@ The output is verified by plotting the led state by using Serial plot software.
 This waveform is plotted at 35Hz frequency. The plotted waveform consist of 4 samples in every wave cycle. In the above figure at right corner of the serial plot window SPS (samples per second) is shown. By dividing the SPS by 4 we get the frequency of the plotted waveform.
 In this case the SPS is 138
 Therefore the frequency of the plotted waveform will be 138/4 = **34.5Hz**.
-## FUTURE SCOPE & LIMITATION
+## FUTURE SCOPE & LIMITATIONS
 The current prototype is giving flicker fusion threshold frequency value almost similar to the theoretical value of human flicker fusion threshold frequency. Eventhough,the plotted waveform have some error with the actual serial printed frequency. In future I like to eliminate this error and make it available for primary school teachers, because it will be helpful for them to teach persistence of vision.
 
 ## CONCLUSION
@@ -74,7 +74,7 @@ Human  flicker fusion threshold was tested successfully using this prototype. My
 This project gave me the opportunity to get into GitHub, Teensy 3.2 and different IDEs etc.
 
 
-## REFERENCE
+## REFERENCES
 
  1. Wikipedia contributors. (2020, January 29). Flicker fusion threshold. Retrieved from https://en.wikipedia.org/wiki/Flicker_fusion_threshold
  2. Teensyduino: Using the UART (real serial) with Teensy on the Arduino IDE. (2020). Retrieved from https://www.pjrc.com/teensy/td_uart.html
