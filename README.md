@@ -37,4 +37,6 @@ The mechanical push button may produce errors in switching therefore we have wri
 The push button is connected to the D5 pin of Teensy 3.2 and GND pin. Led is connected to the 12th pin and GND.
 
 ![ Breadboard representation of circuit](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Circuit/Flickerfusion%20breadboard.png)
-![Schematic Diagram](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Circuit/Flickerfusion%20Schematic.png)
+
+
+![ Schematic Diagram ](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Circuit/Flickerfusion%20Schematic.png)
