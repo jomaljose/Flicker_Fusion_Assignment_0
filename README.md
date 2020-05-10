@@ -1,7 +1,7 @@
 # Flicker Fusion Threshold 
 ### Embedded system assignment 0
 
-`
+
 
 ## AIM
 
@@ -45,10 +45,12 @@ The mechanical push button may produce errors in switching therefore we have wri
 
 ### Circuit
 The push button is connected to the D5 pin of Teensy 3.2 and GND pin. Led is connected to the D12 pin and GND.
+It is also explained in this Youtube video:
+https://youtu.be/GUNod7JRGfk
 
 ![ Breadboard representation of circuit](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Circuit/Flickerfusion%20breadboard.png)
 ![Schematic Diagram](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Circuit/Flickerfusion%20Schematic.png)
-### Software
+### [Software](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Flicker_fusion/src/main.cpp)
  VSCode with Platform IO extension is used to code in this project. The pin 12 and 5 is defined as *ledpin* and *buttonpin* respectively. Internal pullup resistor is enabled by `pinMode(buttonpin, INPUT_PULLUP)` for the button pin. The frequency of led is varied from 0.5Hz to 90Hz using if loop. When the Flicker fusion frequency reaches, the person will press the button and it will trigger the interrupt. In the interrupt routine function, frequency at that time is displayed on the serial monitor along with time period in millisecond. Interrupt is triggered on the falling edge of the switching action. 
  
 ### Output Waveform Display
@@ -59,3 +61,21 @@ The flicker fusion threshold frequency is printed on the serial monitor when the
 
 The output is verified by plotting the led state by using Serial plot software.
 ![Screenshot of Serialplot software at iption hereherehere](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Output/Serial%20Plot%20output_waveform.png)
+This waveform is plotted at 35Hz frequency. The plotted waveform consist of 4 samples in every wave cycle. In the above figure at right corner of the serial plot window SPS (samples per second) is shown. By dividing the SPS by 4 we get the frequency of the plotted waveform.
+In this case the SPS is 138
+Therefore the frequency of the plotted waveform will be 138/4 = **34.5Hz**.
+## FUTURE SCOPE & LIMITATION
+The current prototype is giving flicker fusion threshold frequency value almost similar to the theoretical value of human flicker fusion threshold frequency. Eventhough,the plotted waveform have some error with the actual serial printed frequency. In future I like to eliminate this error and make it available for primary school teachers, because it will be helpful for them to teach persistence of vision.
+
+## CONCLUSION
+
+Human  flicker fusion threshold was tested successfully using this prototype. My conclusion after several tests is that my flicker fusion threshold frequency is between 37-39.5Hz.
+
+This project gave me the opportunity to get into GitHub, Teensy 3.2 and different IDEs etc.
+
+
+## REFERENCE
+
+ 1. Wikipedia contributors. (2020, January 29). Flicker fusion threshold. Retrieved from https://en.wikipedia.org/wiki/Flicker_fusion_threshold
+ 2. Teensyduino: Using the UART (real serial) with Teensy on the Arduino IDE. (2020). Retrieved from https://www.pjrc.com/teensy/td_uart.html
+ 3. Vishay Semiconductors. (2019). _TLUR6400, TLUR6401 datasheet_ (2019 revised ed.), Vishay Semiconductors.
