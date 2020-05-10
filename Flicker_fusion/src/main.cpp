@@ -41,7 +41,7 @@ void loop() {
     ledState = !ledState;
     digitalWrite(ledPin,ledState);
     previousMillis = currentMillis;
-     //Plot point - 2
+    //Plot point - 2
     //Serial.println(ledState);
   }
   repeat++;
