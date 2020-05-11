@@ -34,7 +34,7 @@ In this project I used a Teensy 3.2, a push button, 390 ohm resistor and LED to 
 
 The equation to find the resistance of a pullup resistor
 R = (Vs-Vf)/If
-According to the [Teensy 3.2 data card](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Datasheet/Teensy%203_2%20card%20%20.pdf)the input voltage of Teensy board is 3.3 - 6 Volts.The output voltage of Teensy 3.2 board is 3.3V. The typical Vf of a red LED is 1.8 to 2.1Volts. The safe operating forward current through this led is taken as 10mA.
+According to the [Teensy 3.2 data card](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Datasheet/Teensy%203_2%20card%20%20.pdf)the input voltage of Teensy board is 3.3 - 6 Volts.The output voltage of Teensy 3.2 board is 3.3V. The typical Vf of a red LED is 1.8 to 2.1Volts. The safe operating forward current through this led is taken as 10mA. /s
  Then,
 (3.3-1.8)/10mA = 150ohm
 Therefore for the safe operation of LED the pullup resistance should be greater than 150 ohm. The pullup resistor used in this circuit is 390 ohm.
