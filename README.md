@@ -12,7 +12,7 @@ Set up a prototype of an Embedded System for the measurement of a person’s sub
 
 *"The **flicker fusion threshold**, is a concept in the psycho-physics of vision. It is defined as the frequency at which an intermittent light stimulus appears to be completely steady to the average human observer. Flicker fusion threshold is related to persistence of vision."*
 ##### Flicker Fusion Threshold https://en.wikipedia.org/wiki/Flicker_fusion_threshold
-In this project I used a Teensy 3.2, a push button, 380 ohm resistor and LED to create a prototype. The frequency of LED blinking is continuously increasing in my prototype.  The flicker fusion frequency is displayed using serial monitor of VSCode when the push button is pressed.
+In this project I used a Teensy 3.2, a push button, 390 ohm resistor and LED to create a prototype. The frequency of LED blinking is continuously increasing in my prototype.  The flicker fusion frequency is displayed using serial monitor of VSCode when the push button is pressed.
 
 ## METHODS
 ### Hardware Description
@@ -22,7 +22,7 @@ In this project I used a Teensy 3.2, a push button, 380 ohm resistor and LED to 
 
 
  1. Teensy 3.2
- 2. 330 ohm resistor
+ 2. 390 ohm resistor
  3. Push button
  4. Wires
  5. Breadboard
@@ -34,10 +34,10 @@ In this project I used a Teensy 3.2, a push button, 380 ohm resistor and LED to 
 
 The equation to find the resistance of a pullup resistor
 R = (Vs-Vf)/If
-According to the [Teensy 3.2 data card](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Datasheet/Teensy%203_2%20card%20%20.pdf)the supply voltage of Teensy board is 3.6 - 6 Volts. The typical Vf of a red LED is 1.8 to 2.1Volts. The safe operating forward current through this led is taken as 10mA.
+According to the [Teensy 3.2 data card](https://github.com/jomaljose/Flicker_Fusion_Assignment_0/blob/master/Datasheet/Teensy%203_2%20card%20%20.pdf)the input voltage of Teensy board is 3.3 - 6 Volts.The supply voltage of Teensy 3.2 board is 3.3V. The typical Vf of a red LED is 1.8 to 2.1Volts. The safe operating forward current through this led is taken as 10mA.
  Then,
-(5-1.8)/10mA = 320ohm
-Therefore the pullup resistor used in this circuit is 330 ohm.
+(3.3-1.8)/10mA = 150ohm
+Therefore for the safe operation of LED the pullup resistance should be greater than 150 ohm. The pullup resistor used in this circuit is 390 ohm.
 
 #### Push Button
 
